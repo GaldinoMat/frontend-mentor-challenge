@@ -1,0 +1,21 @@
+[submodule "Newbie/FAQ"]
+	path = Newbie/FAQ
+	url = https://github.com/GaldinoMat/faq-accordion-card
+[submodule "Newbie/Profile"]
+	path = Newbie/Profile
+	url = https://github.com/GaldinoMat/profile-card
+[submodule "Newbie/Social"]
+	path = Newbie/Social
+	url = https://github.com/GaldinoMat/social-proof-frontendmentor
+[submodule "Newbie/Article"]
+	path = Newbie/Article
+	url = https://github.com/GaldinoMat/article-preview
+[submodule "Newbie/Bootcamp"]
+	path = Newbie/Bootcamp
+	url = https://github.com/GaldinoMat/bootcamp-testimonials-carousel
+[submodule "Newbie/Base"]
+	path = Newbie/Base
+	url = https://github.com/GaldinoMat/base-apparel-coming-soon
+[submodule "Newbie/Card"]
+	path = Newbie/Card
+	url = https://github.com/GaldinoMat/Card-Feature-Section
