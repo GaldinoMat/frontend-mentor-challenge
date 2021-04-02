@@ -3,6 +3,7 @@
   --bright-yellow: hsl(71, 73%, 54%);
   --light-gray: hsl(204, 43%, 93%);
   --grayish-blue: hsl(218, 22%, 67%);
+  --light-green: hsl(179, 47%, 52%);
 }
 
 * {
@@ -123,7 +124,7 @@ a {
 
 .call_to_action {
   grid-area: call_to_action;
-  background-color: var(--grayish-blue);
+  background-color: var(--light-green);
   color: var(--light-gray);
   border-bottom-left-radius: 0.3125rem;
   border-bottom-right-radius: 0.3125rem;
@@ -135,7 +136,7 @@ a {
 }
 
 .hover_text li {
-  margin: 0.25rem;
+  margin: 0.1875rem;
   width: fit-content;
 }
 
