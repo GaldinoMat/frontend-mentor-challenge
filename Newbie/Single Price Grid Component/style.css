@@ -1,0 +1,217 @@
+:root {
+  --cyan-color: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  background-color: var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--grayish-blue);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "join_community"
+    "monthly_subscription"
+    "call_to_action";
+  font-size: 1rem;
+  width: 20.3125rem;
+  height: fit-content;
+  margin: 1.5625rem auto;
+}
+
+.title {
+  font-size: 1.25rem;
+}
+
+.container section {
+  padding: 1.25rem;
+}
+
+.container section * {
+  margin: 0.9375rem 0;
+}
+
+.join_community {
+  grid-area: join_community;
+  background-color: white;
+  border-top-left-radius: 0.3125rem;
+  border-top-right-radius: 0.3125rem;
+}
+
+.join_community h1 {
+  color: var(--grayish-blue);
+}
+
+.join_community h2 {
+  color: var(--bright-yellow);
+  font-size: 1rem;
+}
+
+.join_community p {
+  color: var(--cyan-color);
+  width: 17.8125rem;
+  line-height: 1.5;
+}
+
+.monthly_subscription {
+  grid-area: monthly_subscription;
+  background-color: var(--cyan-color);
+  color: var(--light-gray);
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+}
+
+.pricing h2 {
+  font-weight: 400;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.pricing strong {
+  font-size: 2.1875rem;
+  margin: 0 0.625rem 0 0;
+}
+
+.monthly_subscription button {
+  width: 100%;
+  height: 3.125rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 0.625rem 0;
+  background-color: var(--bright-yellow);
+  color: var(--light-gray);
+  border: none;
+  border-radius: 0.3125rem;
+  -webkit-box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.2);
+}
+
+.call_to_action {
+  grid-area: call_to_action;
+  background-color: var(--grayish-blue);
+  color: var(--light-gray);
+  border-bottom-left-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+}
+
+.call_to_action p {
+  width: 13.125rem;
+  line-height: 1.3;
+}
+
+.hover_text li {
+  margin: 0.25rem;
+  width: fit-content;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "join_community join_community"
+      "monthly_subscription call_to_action";
+    width: 43.75rem;
+    margin: 3.125rem auto;
+  }
+
+  .container section {
+    padding: 1.875rem 2.5rem;
+    height: 16.875rem;
+  }
+
+  .title {
+    font-size: 1.375rem;
+  }
+
+  .join_community h1 {
+    font-size: 1.625rem;
+    margin-bottom: 1.5625rem;
+  }
+
+  .join_community h2 {
+    font-size: 1.25rem;
+  }
+
+  .join_community p {
+    width: 37.5rem;
+    font-size: 1.125rem;
+  }
+
+  .monthly_subscription {
+    border-bottom-left-radius: 0.3125rem;
+  }
+
+  .monthly_subscription button {
+    margin-bottom: 1.25rem;
+    transition: transform 0.2s;
+  }
+
+  .monthly_subscription button:hover {
+    transform: scale(1.1);
+  }
+
+  .call_to_action {
+    border-bottom-left-radius: 0;
+  }
+
+  .hover {
+    transition: animate;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background: var(--light-gray);
+    visibility: hidden;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: 0.25s linear;
+  }
+
+  .hover:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+}
